@@ -94,9 +94,14 @@ const siteConfig: SiteConfig = {
   ],
   imagesLink: [
     {
-      src: "https://skillicons.dev/icons?i=git",
-      alt: "Git",
-      caption: "Luiz",
+      src: "https://skillicons.dev/icons?i=docker",
+      alt: "Alternative text for image 2",
+      caption: "Optional caption for image 2",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=nextjs",
+      alt: "Alternative text for image 2",
+      caption: "Optional caption for image 2",
     },
     {
       src: "https://skillicons.dev/icons?i=js",
@@ -119,7 +124,27 @@ const siteConfig: SiteConfig = {
       caption: "Optional caption for image 2",
     },
     {
-      src: "https://skillicons.dev/icons?i=docker",
+      src: "https://skillicons.dev/icons?i=nodejs",
+      alt: "Alternative text for image 2",
+      caption: "Optional caption for image 2",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=tailwindcss",
+      alt: "Alternative text for image 2",
+      caption: "Optional caption for image 2",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=git",
+      alt: "Git",
+      caption: "Luiz",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=vite",
+      alt: "Alternative text for image 2",
+      caption: "Optional caption for image 2",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=figma",
       alt: "Alternative text for image 2",
       caption: "Optional caption for image 2",
     },
@@ -135,11 +160,6 @@ const siteConfig: SiteConfig = {
     },
     {
       src: "https://skillicons.dev/icons?i=prisma",
-      alt: "Alternative text for image 2",
-      caption: "Optional caption for image 2",
-    },
-    {
-      src: "https://skillicons.dev/icons?i=nextjs",
       alt: "Alternative text for image 2",
       caption: "Optional caption for image 2",
     },

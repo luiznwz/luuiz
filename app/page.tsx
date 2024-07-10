@@ -7,6 +7,9 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import siteConfig from "../data/site-config";
 
@@ -201,21 +204,37 @@ export default function Home() {
           <h2>Contact</h2>
           <p className="text-sm">
             Im currently open to work. If you want to get in touch with me, you
-            can send me an email at <a href="mailto:luiz@gmaul.com">Luiz</a>
+            can send me an email at <a href="mailto:luiz@gmaul.com"></a>
           </p>
-          <div className="flex flex-col gap-4">
-            <a
-              className="inline-flex items-center justify-center px-6 py-2 text-sm leading-tight text-main bg-main border border-main rounded-md transition hover:bg-muted"
-              href=""
-            >
-              Get in Touch
-            </a>
-            <a
-              className="inline-flex items-center justify-center px-6 py-2 text-sm leading-tight text-main bg-main border border-main rounded-md transition hover:bg-muted"
-              href=""
-            >
-              Subscribe to Newsletter
-            </a>
+          <div className="space-y-4 max-w-[560px]">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" placeholder="Enter your name" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="Enter your email" />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="message">Message</Label>
+              <Textarea
+                id="message"
+                placeholder="Type your message here."
+                className="min-h-[120px]"
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button className="rounded-full">
+                {/* <DownloadIcon className="mr-2" /> */}
+                Download C.V
+              </Button>
+              <Button className="rounded-full">
+                <div className="h-2 w-2 rounded-full bg-green-500 mr-2" />
+                Available
+              </Button>
+            </div>
           </div>
         </section>
 
