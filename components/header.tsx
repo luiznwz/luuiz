@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = () => {
         </div>
       </div>
       <div className="space-y-4">
-        <h2>About</h2>
+        <h2 className="font-medium">About</h2>
         <p className="text-sm">
           Im a Desenvolvedor Front-end and live in Sao Paulo. I currently work
           at {""}

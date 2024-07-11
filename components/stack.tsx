@@ -7,7 +7,7 @@ export const Stack: React.FC<StackProps> = () => {
 
   return (
     <section className=" max-w-[560px] flex flex-col gap-5 md:gap-6 ">
-      <h2>Skills</h2>
+      <h2 className="font-medium">Skills</h2>
       <div className="relative overflow-hidden group">
         <div className="flex space-x-16">
           <div className="flex space-x-4 animate-loop-scroll group-hover:paused">
