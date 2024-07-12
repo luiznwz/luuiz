@@ -11,6 +11,7 @@ export function ContactForm(props: ContactFormProps) {
     register,
     trigger,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -22,6 +23,7 @@ export function ContactForm(props: ContactFormProps) {
     }
 
     console.log("Submitting form...");
+    reset();
   };
 
   return (
@@ -106,7 +108,7 @@ export function ContactForm(props: ContactFormProps) {
               </p>
             )}
           </div>
-          <div className="flex mt-2">
+          <div className="flex mt-4">
             <Button type="submit" variant="outline" className="btn">
               Submit
             </Button>

@@ -18,7 +18,9 @@ export const Header: React.FC<HeaderProps> = () => {
           <h1 className="font-medium mt-1 text-primary text-sm leading-none">
             Luiz Renan
           </h1>
-          <span className="text-sm">Desenvolvedor Front-end</span>
+          <span className="text-sm text-muted-foreground">
+            Desenvolvedor Front-end
+          </span>
         </div>
       </div>
       <div className="space-y-4">
