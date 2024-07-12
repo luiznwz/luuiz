@@ -1,6 +1,8 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
+import { ViewTransitions } from "next-view-transitions";
 import { Roboto } from "next/font/google";
+
 import "./globals.css";
 
 const roboto = Roboto({
@@ -19,17 +21,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={`${roboto.className}`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

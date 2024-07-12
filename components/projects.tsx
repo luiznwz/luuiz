@@ -1,5 +1,6 @@
 "use client";
 
+import { Link } from "next-view-transitions";
 import React from "react";
 import { Button } from "./ui/button";
 import { LinkPreview } from "./ui/link-preview";
@@ -18,7 +19,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
               TimeWarp - Travel Agency
             </LinkPreview>
           </h3>
-          <div className="mt-1 text-sm leading-normal">
+          <div className="mt-1 text-sm text-muted-foreground leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
             cupiditate vel unde! Omnis repudiandae aspernatur, provident quasi,
             commodi libero numquam ipsa architecto, voluptates eos quia optio.
@@ -37,7 +38,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
               TimeWarp - Travel Agency
             </LinkPreview>
           </h3>
-          <div className="mt-1 text-sm leading-normal">
+          <div className="mt-1 text-sm text-muted-foreground  leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
             cupiditate vel unde! Omnis repudiandae aspernatur, provident quasi,
             commodi libero numquam ipsa architecto, voluptates eos quia optio.
@@ -50,11 +51,11 @@ export const Projects: React.FC<ProjectsProps> = () => {
       </div>
       {/* Button to View All Projects */}
       <div className="flex">
-        <Button variant="outline">
-          <a href="#" className="text-sm">
-            View All Projects
-          </a>
-        </Button>
+        <Link href="/projects">
+          <Button variant="outline">
+            <span className="text-sm">View All Projects</span>
+          </Button>
+        </Link>
       </div>
     </div>
   );
