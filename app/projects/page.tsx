@@ -2,7 +2,7 @@ import { FooterPages } from "@/components/footer-pages";
 
 export default function Project() {
   return (
-    <main className="m-4 px-6">
+    <main className="mt-12 px-6">
       <div className="max-w-[560px] mx-auto flex flex-col gap-20">
         <section className="flex flex-col gap-5 md:gap-6">
           <div className="space-y-12 w-full py-12">
