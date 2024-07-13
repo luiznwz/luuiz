@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = () => {
         <p className="text-sm">
           Im a Desenvolvedor Front-end and live in Sao Paulo. I currently work
           at {""}
-          <HoverCard>
+          <HoverCard openDelay={0} closeDelay={50}>
             <HoverCardTrigger asChild>
               <Button
                 className="text-sm text-green-400 hover:text-green-300 transition duration-400 ease-in-out p-0 h-5"

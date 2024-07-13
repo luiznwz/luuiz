@@ -1,6 +1,12 @@
 export interface StackProps {}
 
 import siteConfig from "../data/site-config";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 export const Stack: React.FC<StackProps> = () => {
   const imagesLink = siteConfig.imagesLink || [];
@@ -10,17 +16,25 @@ export const Stack: React.FC<StackProps> = () => {
       <h2 className="font-medium">Skills</h2>
       <div className="relative overflow-hidden group">
         <div className="flex space-x-16">
-          <div className="flex space-x-4 animate-loop-scroll group-hover:paused">
-            {imagesLink.map((image, index) => (
-              <img
-                className="cursor-pointer"
-                key={index}
-                loading="lazy"
-                src={image.src}
-                alt={image.alt}
-              />
-            ))}
-          </div>
+          <TooltipProvider delayDuration={0}>
+            <div className="flex space-x-4 animate-loop-scroll group-hover:paused">
+              <Tooltip>
+                {imagesLink.map((image, index) => (
+                  <img
+                    className="cursor-pointer"
+                    key={index}
+                    loading="lazy"
+                    src={image.src}
+                    alt={image.alt}
+                  />
+                ))}
+
+                <TooltipContent>
+                  <p>Image 1 Tooltip</p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
+          </TooltipProvider>
         </div>
         {/* Gradientes para bordas no tema claro e escuro */}
         <div className="pointer-events-none absolute inset-0 z-10">

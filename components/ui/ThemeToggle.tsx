@@ -9,7 +9,7 @@ const ThemeToggle: React.FC = () => {
       ) {
         return localStorage.getItem("theme") || "light";
       }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      if (window.matchMedia("(prefers-color-scheme: white)").matches) {
         return "dark";
       }
       return "light";
