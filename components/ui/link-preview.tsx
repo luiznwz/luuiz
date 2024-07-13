@@ -1,16 +1,16 @@
 "use client";
+import { cn } from "@/utils/cn";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-import Image from "next/image";
-import { encode } from "qss";
-import React from "react";
 import {
   AnimatePresence,
   motion,
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/utils/cn";
+import { encode } from "qss";
+import React from "react";
 
 type LinkPreviewProps = {
   children: React.ReactNode;
@@ -29,8 +29,8 @@ export const LinkPreview = ({
   children,
   url,
   className,
-  width = 200,
-  height = 125,
+  width = 350,
+  height = 205,
   quality = 50,
   layout = "fixed",
   isStatic = false,
@@ -91,7 +91,7 @@ export const LinkPreview = ({
       ) : null}
 
       <HoverCardPrimitive.Root
-        openDelay={50}
+        openDelay={30}
         closeDelay={100}
         onOpenChange={(open) => {
           setOpen(open);
@@ -114,7 +114,7 @@ export const LinkPreview = ({
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                initial={{ opacity: 0, y: 8, scale: 0.6 }}
                 animate={{
                   opacity: 1,
                   y: 0,

@@ -1,5 +1,6 @@
 export interface FooterProps {}
 
+import { Link } from "next-view-transitions";
 import siteConfig from "../data/site-config";
 
 export const Footer: React.FC<FooterProps> = () => {
@@ -11,13 +12,13 @@ export const Footer: React.FC<FooterProps> = () => {
         {navLinks.length > 0 && (
           <div className="mb-4 flex flex-wrap gap-x-6 gap-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 className=" hover:underline hover:underline-offset-2"
                 href={link.href}
                 key={link.text}
               >
                 {link.text}
-              </a>
+              </Link>
             ))}
           </div>
         )}
