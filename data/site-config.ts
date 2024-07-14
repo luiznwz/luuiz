@@ -22,11 +22,20 @@ export type Subscribe = {
   formUrl: string;
 };
 
+export type projectsSchema = {
+  title: string;
+  period: string;
+  description: string;
+  imageUrl: string;
+  projectUrl: string;
+};
+
 export type SiteConfig = {
   logo?: Image;
   title: string;
   subtitle?: string;
   description: string;
+  projectsSchema?: projectsSchema[];
   image?: Image;
   headerNavLinks?: Link[];
   footerNavLinks?: Link[];
@@ -62,6 +71,41 @@ const siteConfig: SiteConfig = {
     {
       text: "Tags",
       href: "/tags",
+    },
+  ],
+  projectsSchema: [
+    {
+      title: "ChatCollect",
+      period: "Jan 2024 - Feb 2024",
+      description:
+        "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
+      imageUrl: "image-s3-image1.jpg",
+      projectUrl: "http://localhost:3000/",
+    },
+    // Add more projects here
+    {
+      title: "ChatCollect",
+      period: "Jan 2024 - Feb 2024",
+      description:
+        "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
+      imageUrl: "image-s3-image1.jpg",
+      projectUrl: "http://localhost:3000/",
+    },
+    {
+      title: "ChatCollect",
+      period: "Jan 2024 - Feb 2024",
+      description:
+        "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
+      imageUrl: "image-s3-image1.jpg",
+      projectUrl: "http://localhost:3000/",
+    },
+    {
+      title: "ChatCollect",
+      period: "Jan 2024 - Feb 2024",
+      description:
+        "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
+      imageUrl: "image-s3-image1.jpg",
+      projectUrl: "http://localhost:3000/",
     },
   ],
   footerNavLinks: [
