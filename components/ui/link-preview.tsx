@@ -55,7 +55,6 @@ export const LinkPreview = ({
   }
 
   const [isOpen, setOpen] = React.useState(false);
-
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -64,7 +63,6 @@ export const LinkPreview = ({
 
   const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
-
   const translateX = useSpring(x, springConfig);
 
   const handleMouseMove = (event: any) => {
@@ -76,7 +74,7 @@ export const LinkPreview = ({
 
   return (
     <>
-      {isMounted ? (
+      {isMounted && (
         <div className="hidden">
           <Image
             src={src}
@@ -88,14 +86,12 @@ export const LinkPreview = ({
             alt="hidden image"
           />
         </div>
-      ) : null}
+      )}
 
       <HoverCardPrimitive.Root
         openDelay={30}
         closeDelay={100}
-        onOpenChange={(open) => {
-          setOpen(open);
-        }}
+        onOpenChange={(open) => setOpen(open)}
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
@@ -106,7 +102,7 @@ export const LinkPreview = ({
         </HoverCardPrimitive.Trigger>
 
         <HoverCardPrimitive.Content
-          className="[transform-origin:var(--radix-hover-card-content-transform-origin)]"
+          className="transition-transform duration-300 ease-out"
           side="top"
           align="center"
           sideOffset={10}
@@ -115,21 +111,10 @@ export const LinkPreview = ({
             {isOpen && (
               <motion.div
                 initial={{ opacity: 0, y: 8, scale: 0.6 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  transition: {
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20,
-                  },
-                }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.6 }}
                 className="shadow-xl rounded-xl"
-                style={{
-                  x: translateX,
-                }}
+                style={{ x: translateX }}
               >
                 <Link
                   href={url}

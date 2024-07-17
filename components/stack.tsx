@@ -12,27 +12,27 @@ export const Stack: React.FC<StackProps> = () => {
   const imagesLink = siteConfig.imagesLink || [];
 
   return (
-    <section className=" max-w-[560px] flex flex-col gap-5 md:gap-6 ">
+    <section className="max-w-[560px] flex flex-col gap-5 md:gap-6">
       <h2 className="font-medium">Skills</h2>
       <div className="relative overflow-hidden group">
         <div className="flex space-x-16">
           <TooltipProvider delayDuration={0}>
             <div className="flex space-x-4 animate-loop-scroll group-hover:paused">
-              <Tooltip>
-                {imagesLink.map((image, index) => (
-                  <img
-                    className="cursor-pointer"
-                    key={index}
-                    loading="lazy"
-                    src={image.src}
-                    alt={image.alt}
-                  />
-                ))}
-
-                <TooltipContent>
-                  <p>Image 1 Tooltip</p>
-                </TooltipContent>
-              </Tooltip>
+              {imagesLink.map((image, index) => (
+                <Tooltip key={index}>
+                  <TooltipTrigger asChild>
+                    <img
+                      className="cursor-pointer"
+                      loading="lazy"
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent className="relative">
+                    <p>{image.caption || "Tooltip content"}</p>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
             </div>
           </TooltipProvider>
         </div>

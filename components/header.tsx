@@ -40,7 +40,7 @@ export const Header: React.FC<HeaderProps> = () => {
             <HoverCardContent className="w-80">
               <div className="flex justify-between space-x-4">
                 <Avatar>
-                  <AvatarImage src="https://github.com/shakersagencia.png" />
+                  <AvatarImage src="https://shakersagencia.com.br" />
                   <AvatarFallback>SA</AvatarFallback>
                 </Avatar>
                 <div className="space-y-1">
