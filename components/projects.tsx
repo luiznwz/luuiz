@@ -4,7 +4,6 @@ import { Link } from "next-view-transitions";
 import React from "react";
 import { Button } from "./ui/button";
 import { LinkPreview } from "./ui/link-preview";
-
 export interface ProjectsProps {}
 
 const projects = [

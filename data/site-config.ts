@@ -79,7 +79,7 @@ const siteConfig: SiteConfig = {
       period: "Jan 2024 - Feb 2024",
       description:
         "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
-      imageUrl: "image-s3-image1.jpg",
+      imageUrl: "/image-s3-image1.jpg",
       projectUrl: "http://localhost:3000/",
     },
     // Add more projects here
@@ -88,7 +88,7 @@ const siteConfig: SiteConfig = {
       period: "Jan 2024 - Feb 2024",
       description:
         "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
-      imageUrl: "image-s3-image1.jpg",
+      imageUrl: "/image-s3-image1.jpg",
       projectUrl: "http://localhost:3000/",
     },
     {
@@ -96,7 +96,7 @@ const siteConfig: SiteConfig = {
       period: "Jan 2024 - Feb 2024",
       description:
         "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
-      imageUrl: "image-s3-image1.jpg",
+      imageUrl: "/image-s3-image1.jpg",
       projectUrl: "http://localhost:3000/",
     },
     {
@@ -104,7 +104,7 @@ const siteConfig: SiteConfig = {
       period: "Jan 2024 - Feb 2024",
       description:
         "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
-      imageUrl: "image-s3-image1.jpg",
+      imageUrl: "/image-s3-image1.jpg",
       projectUrl: "http://localhost:3000/",
     },
   ],
@@ -125,15 +125,15 @@ const siteConfig: SiteConfig = {
   socialLinks: [
     {
       text: "GitHub",
-      href: "https://github.com/",
+      href: "https://github.com/luiznwz",
     },
     {
       text: "Instagram",
-      href: "https://instagram.com/",
+      href: "https://instagram.com/luuiz",
     },
     {
       text: "Twitter/X",
-      href: "https://twitter.com/",
+      href: "https://twitter.com/luuiz",
     },
   ],
   imagesLink: [
