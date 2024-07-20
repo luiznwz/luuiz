@@ -17,18 +17,19 @@ export const Header: React.FC<HeaderProps> = () => {
         </div>
       </div>
       <div className="space-y-4">
+        <h2 className="text-secondary-foreground">About</h2>
         <p className="text-foreground font-normal text-base leading-[1.65]">
           Im a Desenvolvedor Front-end at{" "}
           <a
-            href="https://exata.it"
+            href="https://shakersagencia.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-underline-position: from-font underline decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-decoration-muted dark:hover:decoration-decoration"
+            className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
           >
             ShakersAgency
           </a>{" "}
           and live in São Paulo. My goal is to create incredible experiences for
-          users with the new design techniques Im constantly studying and
+          users with the new design techniques I#m constantly studying and
           learning.
         </p>
         <p className="text-foreground font-normal text-base leading-[1.65]">

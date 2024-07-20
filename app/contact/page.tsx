@@ -35,7 +35,7 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
-      <div className="fixed bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent dark:from-[hsl(210,20%,10%)] pointer-events-none"></div>
+      <div className="fixed bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#ffff] to-transparent dark:from-[#121212] dark:to-transparent pointer-events-none"></div>
       <FooterPages />
     </div>
   );
