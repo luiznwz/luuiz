@@ -19,7 +19,7 @@ export default function Project() {
           <section className="flex flex-col gap-5 md:gap-6">
             <div className="space-y-12 w-full py-12">
               <div className="opacity-100 filter blur-0 transform translate-y-0 translate-z-0">
-                <div className="flex flex-col items-center justify-center space-y-4">
+                <div className="flex flex-col space-y-4">
                   <div className="space-y-2">
                     <Breadcrumb>
                       <BreadcrumbList>
@@ -86,8 +86,8 @@ export default function Project() {
             </div>
           </section>
           <div className="fixed bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#ffff] to-transparent dark:from-[#121212] dark:to-transparent pointer-events-none"></div>
-          <FooterPages />
         </div>
+        <FooterPages />
       </main>
     </div>
   );
