@@ -15,7 +15,7 @@ export default function Project() {
   return (
     <div className="relative">
       <main className="mt-12 px-6">
-        <div className="max-w-[560px] mx-auto flex flex-col gap-20">
+        <div className="max-w-[644px] mx-auto flex flex-col gap-20">
           <section className="flex flex-col gap-5 md:gap-6">
             <div className="space-y-12 w-full py-12">
               <div className="opacity-100 filter blur-0 transform translate-y-0 translate-z-0">
@@ -36,7 +36,7 @@ export default function Project() {
                     <h3 className="pt-4 text-2xl font-medium tracking-tighter sm:text-xl">
                       Check out my latest work
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-sm">
                       Ive worked on a variety of projects, from simple websites
                       to complex web applications. Here are a few of my
                       favorites.
@@ -44,7 +44,7 @@ export default function Project() {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[560px] mx-auto">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-1 max-w-[644px] mx-auto">
                 {projectsSchema.map((project, index) => (
                   <div
                     key={index}
@@ -56,8 +56,8 @@ export default function Project() {
                         href={project.projectUrl}
                       >
                         <Image
-                          width={270}
-                          height={180}
+                          width={1000}
+                          height={100}
                           src={project.imageUrl}
                           alt={project.title}
                         />
