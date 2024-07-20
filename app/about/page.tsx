@@ -28,8 +28,8 @@ export default function About() {
             <h3 className="text-secondary-foreground pt-4 text-2xl font-medium tracking-tighter sm:text-xl">
               About Me
             </h3>
-            <p className="">
-              I'm a Front-end Developer, currently residing in São Paulo. My
+            <p className="text">
+              Im a Front-end Developer, currently residing in São Paulo. My
               passion lies in creating incredible user experiences by leveraging
               the latest design techniques and continually expanding my
               knowledge. My journey in front-end development has allowed me to
