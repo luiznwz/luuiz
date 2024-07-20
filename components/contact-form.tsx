@@ -28,19 +28,22 @@ export function ContactForm(props: ContactFormProps) {
 
   return (
     <section className="flex flex-col gap-5 md:gap-6">
-      <h2 className="font-medium">Contact</h2>
-      <p className="text-sm">
+      <h2 className="font-medium text-secondary-foreground">Connect</h2>
+      <p className="text-foreground font-normal text-base leading-[1.65]">
         Im currently open to work. If you want to get in touch with me, you can
         send me an email at{" "}
-        <a className="text-green-400" href="mailto:luiz@gmaul.com">
+        <a
+          className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
+          href="mailto:luiz@gmaul.com"
+        >
           luiz@
         </a>
       </p>
-      <p className="text-sm">
+      <p className="text-foreground font-normal text-base leading-[1.65]">
         You can see more of my work on{" "}
         <a
           href="https://www.linkedin.com"
-          className="text-green-400 hover:text-green-300"
+          className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -49,7 +52,7 @@ export function ContactForm(props: ContactFormProps) {
         and{" "}
         <a
           href="https://twitter.com"
-          className="text-green-400 hover:text-green-300"
+          className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -58,24 +61,15 @@ export function ContactForm(props: ContactFormProps) {
         or my code on{" "}
         <a
           href="https://github.com"
-          className="text-green-400 hover:text-green-300"
+          className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
           target="_blank"
           rel="noopener noreferrer"
         >
           Github
         </a>
-        . I also have a personal{" "}
-        <a
-          href="https://www.instagram.com"
-          className="text-green-400 hover:text-green-300"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
         .
       </p>
-      <div className="space-y-4 max-w-[560px]">
+      <div className="space-y-4 max-w-[644px]">
         <form
           onSubmit={onSubmit}
           action="https://formsubmit.co/71d199891767050bd2e70920bdc0ba78"
@@ -83,7 +77,7 @@ export function ContactForm(props: ContactFormProps) {
         >
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label className="text-sm" htmlFor="name">
+              <Label className="text-secondary-foreground" htmlFor="name">
                 Name
               </Label>
               <Input
@@ -104,7 +98,7 @@ export function ContactForm(props: ContactFormProps) {
               )}
             </div>
             <div className="space-y-2">
-              <Label className="text-sm" htmlFor="email">
+              <Label className="text-secondary-foreground" htmlFor="email">
                 Email
               </Label>
               <Input
@@ -126,7 +120,7 @@ export function ContactForm(props: ContactFormProps) {
             </div>
           </div>
           <div className="mt-2 space-y-2">
-            <Label className="text-sm" htmlFor="message">
+            <Label className="text-secondary-foreground" htmlFor="message">
               Message
             </Label>
             <Textarea
@@ -148,7 +142,11 @@ export function ContactForm(props: ContactFormProps) {
             )}
           </div>
           <div className="flex mt-4">
-            <Button type="submit" variant="outline" className="btn">
+            <Button
+              type="submit"
+              variant="outline"
+              className="btn text-secondary-foreground"
+            >
               Submit
             </Button>
           </div>
