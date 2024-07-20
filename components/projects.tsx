@@ -62,7 +62,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
                 {project.title}
               </LinkPreview>
             </h3>
-            <div className="mt-1 leading-normal">{project.description}</div>
+            <p className="">{project.description}</p>
           </div>
           <div className="hidden italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0">
             <span className="text-sm text-secondary-foreground">

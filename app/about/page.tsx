@@ -10,7 +10,7 @@ import {
 
 export default function About() {
   return (
-    <div className="relative">
+    <div className="relative text-foreground">
       <main className="mt-20 px-6">
         <div className="max-w-[560px] mx-auto flex flex-col space-y-4">
           <div className="space-y-2">
@@ -25,17 +25,22 @@ export default function About() {
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
-            <h3 className="pt-4 text-2xl font-medium tracking-tighter sm:text-xl">
+            <h3 className="text-secondary-foreground pt-4 text-2xl font-medium tracking-tighter sm:text-xl">
               About Me
             </h3>
-            <p className="text-muted-foreground text-sm">
-              Im a software engineer based in Lagos, Nigeria. I specialize in
-              building websites and applications that are fast, accessible, and
-              easy to use. I have experience working with a variety of clients
-              in different industries. I enjoy working on projects that require
-              a mix of creative and strategic thinking. When Im not coding, you
-              can find me reading, running, or watching movies. Feel free to
-              reach out to me. I would love to hear from you.
+            <p className="text">
+              Im a Front-end Developer, currently residing in São Paulo. My
+              passion lies in creating incredible user experiences by leveraging
+              the latest design techniques and continually expanding my
+              knowledge. My journey in front-end development has allowed me to
+              work with a diverse range of clients across various industries,
+              enabling me to blend creativity with strategic thinking to deliver
+              top-notch solutions.
+              <br />
+              <br />I enjoy working on projects that require a mix of creative
+              and strategic thinking. When Im not coding, you can find me
+              reading, running, or watching movies. Feel free to reach out to
+              me. I would love to hear from you.
             </p>
           </div>
         </div>
