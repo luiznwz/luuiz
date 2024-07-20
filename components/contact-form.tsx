@@ -36,6 +36,45 @@ export function ContactForm(props: ContactFormProps) {
           luiz@
         </a>
       </p>
+      <p className="text-sm">
+        You can see more of my work on{" "}
+        <a
+          href="https://www.linkedin.com"
+          className="text-green-400 hover:text-green-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Linkedin{" "}
+        </a>
+        and{" "}
+        <a
+          href="https://twitter.com"
+          className="text-green-400 hover:text-green-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Twitter{" "}
+        </a>
+        or my code on{" "}
+        <a
+          href="https://github.com"
+          className="text-green-400 hover:text-green-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
+        . I also have a personal{" "}
+        <a
+          href="https://www.instagram.com"
+          className="text-green-400 hover:text-green-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        .
+      </p>
       <div className="space-y-4 max-w-[560px]">
         <form
           onSubmit={onSubmit}

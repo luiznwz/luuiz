@@ -26,7 +26,7 @@ const projects = [
 
 export const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <div className="flex flex-col gap-5 md:gap-6">
+    <div className="flex flex-col gap-5 sm:gap-4">
       <h2 className="font-medium">Projects</h2>
       {projects.map((project, index) => (
         <div

@@ -1,13 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
   return (
-    <section className="flex flex-col gap-5 md:gap-6">
-      <div className="flex">
+    <section className="flex flex-col gap-5 sm:gap-6">
+      <div className="flex items-center">
         <Avatar>
           <a href="https://github.com/luiznwz">
             <AvatarImage src="https://github.com/luiznwz.png" />
@@ -15,93 +13,27 @@ export const Header: React.FC<HeaderProps> = () => {
           </a>
         </Avatar>
         <div className="mx-3">
-          <h1 className="font-medium mt-1 text-primary text-sm leading-none">
-            Luiz Renan
-          </h1>
-          <span className="text-sm text-muted-foreground">
-            Desenvolvedor Front-end
-          </span>
+          <h1 className="font-medium text-primary text-base">Luiz Renan</h1>
         </div>
       </div>
       <div className="space-y-4">
-        <h2 className="font-medium">About</h2>
-        <p className="text-sm">
-          Im a Desenvolvedor Front-end and live in Sao Paulo. I currently work
-          at {""}
-          <HoverCard openDelay={0} closeDelay={50}>
-            <HoverCardTrigger asChild>
-              <Button
-                className="text-sm text-green-400 hover:text-green-300 transition duration-400 ease-in-out p-0 h-5"
-                variant="link"
-              >
-                ShakersAgency
-              </Button>
-            </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <div className="flex justify-between space-x-4">
-                <Avatar>
-                  <AvatarImage src="https://shakersagencia.com.br" />
-                  <AvatarFallback>SA</AvatarFallback>
-                </Avatar>
-                <div className="space-y-1">
-                  <h4 className="text-sm font-semibold">Shakers Agency</h4>
-                  <p className="text-sm">
-                    The React Framework – created and maintained by @vercel.
-                  </p>
-                  <div className="flex items-center pt-2">
-                    <span className="text-xs text-muted-foreground">
-                      Joined March 2024
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </HoverCardContent>
-          </HoverCard>
+        <p className="text-foreground font-normal text-base leading-[1.65]">
+          Im a Desenvolvedor Front-end at{" "}
+          <a
+            href="https://exata.it"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-underline-position: from-font underline decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-decoration-muted dark:hover:decoration-decoration"
+          >
+            ShakersAgency
+          </a>{" "}
+          and live in São Paulo. My goal is to create incredible experiences for
+          users with the new design techniques Im constantly studying and
+          learning.
         </p>
-        <p className="text-sm">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vero
-          iure accusamus dolore sapiente rem explicabo inventore fuga.
-          Accusantium voluptatum nihil ut quam iste reiciendis. Sit autem et nam
-          quae.
-        </p>
-        <p className="text-sm">
-          You can see more of my work on{" "}
-          <a
-            href="https://www.linkedin.com"
-            className="text-green-400 hover:text-green-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Linkedin{" "}
-          </a>
-          and{" "}
-          <a
-            href="https://twitter.com"
-            className="text-green-400 hover:text-green-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter{" "}
-          </a>
-          or my code on{" "}
-          <a
-            href="https://github.com"
-            className="text-green-400 hover:text-green-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          . I also have a personal{" "}
-          <a
-            href="https://www.instagram.com"
-            className="text-green-400 hover:text-green-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          .
+        <p className="text-foreground font-normal text-base leading-[1.65]">
+          Im also developing the _query_, my library of components that elevate
+          web design.
         </p>
       </div>
     </section>
