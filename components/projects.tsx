@@ -27,7 +27,7 @@ const projects = [
 export const Projects: React.FC<ProjectsProps> = () => {
   return (
     <div className="flex flex-col gap-5 sm:gap-4">
-      <h2 className="font-medium text-secondary-foreground">Projects</h2>
+      <h2 className="font-medium ">Projects</h2>
       {projects.map((project, index) => (
         <div
           key={index}
@@ -40,7 +40,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
               height="16"
               viewBox="0 0 24 24"
               fill="none"
-              className="absolute left-[-24px] top-[12px] opacity-0 shadow-none outline-none transition-opacity group-hover:opacity-100 group-focus:opacity-100"
+              className="absolute sm:left-[-24px] sm:top-[12px] opacity-0 shadow-none outline-none transition-opacity group-hover:opacity-100 group-focus:opacity-100"
             >
               <path
                 d="M10 19.0004L9.82843 19.1719C8.26634 20.734 5.73368 20.734 4.17158 19.1719L3.82843 18.8288C2.26634 17.2667 2.26633 14.734 3.82843 13.1719L7.17158 9.8288C8.73368 8.2667 11.2663 8.2667 12.8284 9.8288L13.1716 10.1719C13.8252 10.8256 14.2053 11.6491 14.312 12.5004"
@@ -57,11 +57,11 @@ export const Projects: React.FC<ProjectsProps> = () => {
                 stroke-linejoin="round"
               ></path>
             </svg>
-            <h3 className="text-xl py-2 leading-tight font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1">
+            <h2 className="text-xl py-2 text-secondary-foreground leading-tight font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1">
               <LinkPreview url={project.projectUrl}>
                 {project.title}
               </LinkPreview>
-            </h3>
+            </h2>
             <p className="">{project.description}</p>
           </div>
           <div className="hidden italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0">
