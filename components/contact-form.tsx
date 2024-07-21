@@ -1,3 +1,5 @@
+"use client";
+
 import { useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -31,19 +33,23 @@ export function ContactForm(props: ContactFormProps) {
       <section className="flex flex-col gap-5 md:gap-6">
         <h2 className="font-medium text-secondary-foreground">Connect</h2>
         <p className="text-foreground font-normal text-base leading-[1.65]">
-          Im currently open to work. If you want to get in touch with me, you
-          can send me an email at{" "}
+          I am currently open to new opportunities. If you{"'"}d like to get in
+          touch, please feel free to{" "}
           <a
             className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
             href="mailto:luiz@gmaul.com"
           >
-            luiz@
-          </a>
+            email
+          </a>{" "}
+          me.
         </p>
+
         <div className="space-y-4 max-w-[644px]">
           <form
+            action="https://formkeep.com/f/5dda35cc6ab7"
+            encType="multipart/form-data"
+            accept-charset="UTF-8"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/71d199891767050bd2e70920bdc0ba78"
             method="POST"
           >
             <div className="grid grid-cols-2 gap-4">
@@ -74,8 +80,7 @@ export function ContactForm(props: ContactFormProps) {
                   Email
                 </Label>
                 <Input
-                  id="email"
-                  type="email"
+                  type="email" id="email-address" name="email"
                   placeholder="Enter your email"
                   {...register("email", {
                     required: true,
