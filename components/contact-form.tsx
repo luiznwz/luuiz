@@ -80,7 +80,8 @@ export function ContactForm(props: ContactFormProps) {
                   Email
                 </Label>
                 <Input
-                  type="email" id="email-address" name="email"
+                  id="email"
+                  type="email"
                   placeholder="Enter your email"
                   {...register("email", {
                     required: true,
