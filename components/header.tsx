@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = () => {
       <div className="space-y-4">
         <h2 className="text-secondary-foreground">About</h2>
         <p className="text-foreground font-normal text-base leading-[1.65]">
-          Im a Desenvolvedor Front-end at{" "}
+          I{"'"}m a Desenvolvedor Front-end at{" "}
           <a
             href="https://shakersagencia.com.br"
             target="_blank"
@@ -29,12 +29,12 @@ export const Header: React.FC<HeaderProps> = () => {
             ShakersAgency
           </a>{" "}
           and live in São Paulo. My goal is to create incredible experiences for
-          users with the new design techniques I#m constantly studying and
+          users with the new design techniques, I{"'"}m constantly studying and
           learning.
         </p>
         <p className="text-foreground font-normal text-base leading-[1.65]">
-          Im also developing the _query_, my library of components that elevate
-          web design.
+          I{"'"}m also working on optimizing and enhancing the user experience
+          for a leading e-commerce platform using Liquid and Shopify.
         </p>
       </div>
     </section>

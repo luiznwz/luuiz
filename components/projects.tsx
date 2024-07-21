@@ -15,9 +15,9 @@ const projects = [
     projectUrl: "https://www.example.com",
   },
   {
-    title: "TimeWarp - Travel Agency",
+    title: "S3 Upload - Image Storage",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate vel unde! Omnis repudiandae aspernatur, provident quasi, commodi libero numquam ipsa architecto, voluptates eos quia optio. Ducimus eum natus dolore.",
+      "A robust and efficient service for uploading and storing gallery images on AWS S3. This project leverages the AWS SDK to seamlessly integrate with Amazon S3, allowing users to upload images through a user-friendly interface built with Next.js.",
     imageUrl: "https://www.example.com/image2.jpg",
     projectUrl: "https://www.example.com",
   },
@@ -27,7 +27,7 @@ const projects = [
 export const Projects: React.FC<ProjectsProps> = () => {
   return (
     <div className="flex flex-col gap-5 sm:gap-4">
-      <h2 className="font-medium ">Projects</h2>
+      <h2 className="font-medium text-secondary-foreground">Projects</h2>
       {projects.map((project, index) => (
         <div
           key={index}
