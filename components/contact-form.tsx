@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -152,7 +154,7 @@ export function ContactForm(props: ContactFormProps) {
           </a>
           or my code on{" "}
           <a
-            href="https://github.com"
+            href="https://github.com/luiznwz"
             className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
             target="_blank"
             rel="noopener noreferrer"
