@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = () => {
       <div className="space-y-4">
         <h2 className="text-secondary-foreground">About</h2>
         <p className="text-foreground font-normal text-base leading-[1.65]">
-          I{"'"}m a Desenvolvedor Front-end at{" "}
+          I{"'"}m a Front-end Developer at{" "}
           <a
             href="https://shakersagencia.com.br"
             target="_blank"

@@ -8,7 +8,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import siteConfig from "@/data/site-config";
-import Image from "next/image";
 
 export default function Project() {
   const projectsSchema = siteConfig.projectsSchema || [];
@@ -44,45 +43,7 @@ export default function Project() {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-1 max-w-[644px] mx-auto">
-                {projectsSchema.map((project, index) => (
-                  <div
-                    key={index}
-                    className="transition-transform transform hover:translate-y-[-2px] duration-300"
-                  >
-                    <div className="rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg transition-shadow duration-300 pb-2 h-full">
-                      <a
-                        className="block cursor-pointer"
-                        href={project.projectUrl}
-                      >
-                        <Image
-                          width={1000}
-                          height={100}
-                          src={project.imageUrl}
-                          alt={project.title}
-                        />
-                        {/* Uncomment and use video element if needed
-                      <video className="pointer-events-none mx-auto h-40 w-full object-cover object-top">
-                        <source src="https://www.pexels.com/pt-br/video/panorama-vista-paisagem-montanhas-4231734/" type="video/mp4" />
-                      </video>
-                      */}
-                      </a>
-                      <div className="flex flex-col px-2">
-                        <div className="space-y-1">
-                          <h3 className="font-semibold tracking-tight mt-1 text-base">
-                            {project.title}
-                          </h3>
-                          <time className="text-sm">{project.period}</time>
-                          <div className="hidden font-sans text-xs underline print:visible"></div>
-                          <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-                            <p>{project.description}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <h2 className="text-center pt-20">Building...</h2>
             </div>
           </section>
           <div className="fixed bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#ffff] to-transparent dark:from-[#121212] dark:to-transparent pointer-events-none"></div>
