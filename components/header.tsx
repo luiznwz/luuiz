@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = () => {
             href="https://shakersagencia.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
+            className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400 duration-400 transition"
           >
             ShakersAgency
           </a>{" "}
