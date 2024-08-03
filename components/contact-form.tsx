@@ -37,7 +37,7 @@ export function ContactForm(props: ContactFormProps) {
           touch, please feel free to{" "}
           <a
             className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400"
-            href="mailto:luiz@gmaul.com"
+            href="mailto:luizrenan179@gmail.com"
           >
             email
           </a>{" "}
