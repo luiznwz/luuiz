@@ -46,12 +46,14 @@ export function ContactForm(props: ContactFormProps) {
 
         <div className="space-y-4 max-w-[644px]">
           <form
-            action="https://formkeep.com/f/5dda35cc6ab7"
-            encType="multipart/form-data"
+            action="https://formsubmit.co/luizrenangomes77@gmail.com"
             accept-charset="UTF-8"
             onSubmit={onSubmit}
             method="POST"
           >
+            <input type="hidden" name="_subject" value="Novo contato do site" />
+            <input type="hidden" name="_captcha" value="false" />
+
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label className="text-secondary-foreground" htmlFor="name">
