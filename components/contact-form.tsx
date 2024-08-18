@@ -13,7 +13,6 @@ export function ContactForm(props: ContactFormProps) {
     register,
     trigger,
     formState: { errors },
-    reset,
   } = useForm();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +24,6 @@ export function ContactForm(props: ContactFormProps) {
     }
 
     console.log("Submitting form...");
-    reset();
   };
 
   return (
