@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -18,12 +19,13 @@ export function ContactForm(props: ContactFormProps) {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
     if (!isValid) {
+      toast.error(
+        "An error occurred while submitting the form. Please try again."
+      );
       e.preventDefault();
-      console.log("Form is not valid.");
       return;
     }
-
-    console.log("Submitting form...");
+    toast.success("Form submitted successfully!");
   };
 
   return (
@@ -45,6 +47,7 @@ export function ContactForm(props: ContactFormProps) {
         <div className="space-y-4 max-w-[644px]">
           <form
             action="https://formsubmit.co/luizrenangomes77@gmail.com"
+            target="_blank"
             accept-charset="UTF-8"
             onSubmit={onSubmit}
             method="POST"
