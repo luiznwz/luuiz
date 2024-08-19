@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import { VercelToolbar } from "@vercel/toolbar/next";
 
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const shouldInjectToolbar = process.env.NODE_ENV === 'development';
   return (
     <ViewTransitions>
       <html lang="en">
@@ -34,6 +36,7 @@ export default function RootLayout({
           >
             <Toaster richColors />
             {children}
+            {shouldInjectToolbar && <VercelToolbar />}
             <SpeedInsights />
           </ThemeProvider>
         </body>

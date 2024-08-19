@@ -44,7 +44,7 @@ export function ContactForm(props: ContactFormProps) {
           me.
         </p>
 
-        <div className="space-y-4 max-w-[644px]">
+        <div className="space-y-4 max-w-[692px]">
           <form
             action="https://formsubmit.co/luizrenangomes77@gmail.com"
             target="_blank"

@@ -41,7 +41,7 @@ export default function Home() {
           </DropdownMenuContent>
         </DropdownMenu>
         <CommandDialog />
-        <div className="max-w-[644px] mx-auto flex flex-col gap-20 sm:gap-24">
+        <div className="max-w-[692px] mx-auto flex flex-col gap-20 sm:gap-24">
           {/* Header */}
           <Header />
 
