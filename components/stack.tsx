@@ -13,7 +13,7 @@ export const Stack: React.FC<StackProps> = () => {
   const imagesLink = siteConfig.imagesLink || [];
 
   return (
-    <section className="max-w-[644px] flex flex-col gap-5 md:gap-6">
+    <section className="max-w-[692px] flex flex-col gap-5 md:gap-6">
       <h2 className="font-medium text-secondary-foreground">Skills</h2>
       <div className="relative overflow-hidden group">
         <div className="flex space-x-16">

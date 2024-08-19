@@ -5,4 +5,9 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+import withVercelToolbar from '@vercel/toolbar/plugins/next';
+
+// Aplicando o withVercelToolbar e exportando a configuração
+const config = withVercelToolbar()(nextConfig);
+
+export default config;

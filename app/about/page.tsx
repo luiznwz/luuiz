@@ -12,7 +12,7 @@ export default function About() {
   return (
     <div className="relative text-[var(--foreground)]">
       <main className="mt-20 px-6">
-        <div className="max-w-[644px] mx-auto flex flex-col space-y-4">
+        <div className="max-w-[692px] mx-auto flex flex-col space-y-4">
           <div className="space-y-2">
             <Breadcrumb>
               <BreadcrumbList>

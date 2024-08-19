@@ -1,6 +1,6 @@
 export default function Page404() {
   return (
-    <main className="max-w-[644px] place-items-center px-6 sm:py-24 lg:px-8">
+    <main className="max-w-[692px] place-items-center px-6 sm:py-24 lg:px-8">
       <div className="text-center">
         <p className="text-sm font-semibold text-green-400">404</p>
         <h1 className="mt-4 text-xl font-bold tracking-tight sm:text-5xl">
