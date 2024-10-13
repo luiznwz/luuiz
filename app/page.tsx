@@ -42,19 +42,10 @@ export default function Home() {
         </DropdownMenu>
         <CommandDialog />
         <div className="max-w-[692px] mx-auto flex flex-col gap-20 sm:gap-24">
-          {/* Header */}
           <Header />
-
-          {/* Projects */}
           <Projects />
-
-          {/* Skills */}
           <Stack />
-
-          {/* Contact */}
           <ContactForm />
-
-          {/* Footer */}
           <Footer />
         </div>
       </main>
