@@ -6,26 +6,56 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
+import { useState } from "react";
 
 interface ContactFormProps {}
 
 export function ContactForm(props: ContactFormProps) {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     trigger,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const isValid = await trigger();
+
     if (!isValid) {
       toast.error(
-        "An error occurred while submitting the form. Please try again."
+        "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
       );
-      e.preventDefault();
       return;
     }
-    toast.success("Form submitted successfully!");
+
+    setIsLoading(true);
+
+    const formElement = e.target as HTMLFormElement;
+    const formData = new FormData(formElement);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/luizrenangomes77@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      });
+
+      if (response.ok) {
+        toast.success("Formulário enviado com sucesso!");
+        reset();
+      } else {
+        toast.error("Erro ao enviar formulário. Tente novamente.");
+      }
+    } catch (error) {
+      toast.error("Erro ao enviar formulário. Tente novamente.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -46,9 +76,6 @@ export function ContactForm(props: ContactFormProps) {
 
         <div className="space-y-4 max-w-[692px]">
           <form
-            action="https://formsubmit.co/luizrenangomes77@gmail.com"
-            target="_blank"
-            accept-charset="UTF-8"
             onSubmit={onSubmit}
             method="POST"
           >
@@ -127,9 +154,17 @@ export function ContactForm(props: ContactFormProps) {
               <Button
                 type="submit"
                 variant="outline"
-                className="btn text-secondary-foreground"
+                className="btn text-secondary-foreground relative"
+                disabled={isLoading}
               >
-                Submit
+                {isLoading ? (
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 border-2 border-t-transparent border-secondary-foreground rounded-full animate-spin"></div>
+                    <span>Enviando...</span>
+                  </div>
+                ) : (
+                  "Submit"
+                )}
               </Button>
             </div>
           </form>
