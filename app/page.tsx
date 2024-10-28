@@ -44,7 +44,6 @@ export default function Home() {
         <div className="max-w-[692px] mx-auto flex flex-col gap-20 sm:gap-24">
           <Header />
           <Projects />
-          <Stack />
           <ContactForm />
           <Footer />
         </div>
