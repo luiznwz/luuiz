@@ -21,16 +21,18 @@ export function ContactForm(props: ContactFormProps) {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     const isValid = await trigger();
 
     if (!isValid) {
-      toast.error(
-        "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
-      );
+      setTimeout(() => {
+        setIsLoading(false);
+        toast.error(
+          "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
+        );
+      }, 500);
       return;
     }
-
-    setIsLoading(true);
 
     const formElement = e.target as HTMLFormElement;
     const formData = new FormData(formElement);
@@ -97,7 +99,7 @@ export function ContactForm(props: ContactFormProps) {
                   })}
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm">
+                  <p className="text-red-500 text-sm opacity-0 transition-opacity duration-200" style={{ opacity: isLoading ? '0' : '1' }}>
                     {errors.name.type === "required" &&
                       "This field is required."}
                     {errors.name.type === "maxLength" &&
@@ -119,7 +121,7 @@ export function ContactForm(props: ContactFormProps) {
                   })}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm">
+                  <p className="text-red-500 text-sm opacity-0 transition-opacity duration-200" style={{ opacity: isLoading ? '0' : '1' }}>
                     {errors.email.type === "required" &&
                       "This field is required."}
                     {errors.email.type === "pattern" &&
@@ -142,7 +144,7 @@ export function ContactForm(props: ContactFormProps) {
                 })}
               />
               {errors.message && (
-                <p className="text-red-500 text-sm">
+                <p className="text-red-500 text-sm opacity-0 transition-opacity duration-200" style={{ opacity: isLoading ? '0' : '1' }}>
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
