@@ -17,20 +17,21 @@ export const Stack: React.FC<StackProps> = () => {
       <h2 className="font-medium text-secondary-foreground">Skills</h2>
       <div className="relative overflow-hidden group">
         <div className="flex space-x-16">
-          <TooltipProvider delayDuration={0}>
-            <div className="flex space-x-4 animate-loop-scroll group-hover:paused shadow-dark">
-              {imagesLink.map((image, index) => (
+          <TooltipProvider>
+            <div className="flex space-x-4 animate-loop-scroll group-hover:paused">
+              {[...imagesLink, ...imagesLink, ...imagesLink].map((image, index) => (
                 <Tooltip key={index}>
-                  <TooltipTrigger asChild>
+                  <TooltipTrigger>
                     <img
                       className="cursor-pointer"
                       loading="lazy"
                       src={image.src}
                       alt={image.alt}
+                      style={{ minWidth: 'max-content' }}
                     />
                   </TooltipTrigger>
-                  <TooltipContent className="relative">
-                    <p>{image.caption || "Tooltip content"}</p>
+                  <TooltipContent>
+                    <p>{image.alt}</p>
                   </TooltipContent>
                 </Tooltip>
               ))}
