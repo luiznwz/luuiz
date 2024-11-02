@@ -23,7 +23,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const shouldInjectToolbar = process.env.NODE_ENV === 'development';
   return (
     <ViewTransitions>
       <html lang="en">
@@ -36,7 +35,6 @@ export default function RootLayout({
           >
             <Toaster richColors />
             {children}
-            {shouldInjectToolbar && <VercelToolbar />}
             <SpeedInsights />
           </ThemeProvider>
         </body>
