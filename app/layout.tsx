@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
-import { VercelToolbar } from "@vercel/toolbar/next";
 
 import "./globals.css";
 
