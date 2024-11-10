@@ -7,13 +7,13 @@ import { LinkPreview } from "./ui/link-preview";
 export interface ProjectsProps {}
 
 const projects = [
-  {
-    title: "TimeWarp - Travel Agency",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate vel unde! Omnis repudiandae aspernatur, provident quasi, commodi libero numquam ipsa architecto, voluptates eos quia optio. Ducimus eum natus dolore.",
-    imageUrl: "https://www.example.com/image1.jpg",
-    projectUrl: "https://www.example.com",
-  },
+  // {
+  //   title: "TimeWarp - Travel Agency",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate vel unde! Omnis repudiandae aspernatur, provident quasi, commodi libero numquam ipsa architecto, voluptates eos quia optio. Ducimus eum natus dolore.",
+  //   imageUrl: "https://www.example.com/image1.jpg",
+  //   projectUrl: "https://www.example.com",
+  // },
   {
     title: "S3 Upload - Image Storage",
     description:
