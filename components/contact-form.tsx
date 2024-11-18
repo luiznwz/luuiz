@@ -28,7 +28,7 @@ export function ContactForm(props: ContactFormProps) {
       setTimeout(() => {
         setIsLoading(false);
         toast.error(
-          "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
+          "An error occurred while submitting the form. Please try again."
         );
       }, 500);
       return;
@@ -48,13 +48,13 @@ export function ContactForm(props: ContactFormProps) {
       });
 
       if (response.ok) {
-        toast.success("Formulário enviado com sucesso!");
+        toast.success("Form submitted successfully!");
         reset();
       } else {
-        toast.error("Erro ao enviar formulário. Tente novamente.");
+        toast.error("Error submitting form. Please try again.");
       }
     } catch (error) {
-      toast.error("Erro ao enviar formulário. Tente novamente.");
+      toast.error("Error submitting form. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -162,7 +162,7 @@ export function ContactForm(props: ContactFormProps) {
                 {isLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 border-2 border-t-transparent border-secondary-foreground rounded-full animate-spin"></div>
-                    <span>Enviando...</span>
+                    <span>Sending...</span>
                   </div>
                 ) : (
                   "Submit"
