@@ -3,8 +3,6 @@ import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Projects } from "@/components/projects";
-import { Stack } from "@/components/stack";
-import { Button } from "@/components/ui/button";
 import { CommandDialog } from "@/components/ui/command";
 import {
   DropdownMenu,
@@ -12,7 +10,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export default function Home() {

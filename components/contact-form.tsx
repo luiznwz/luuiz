@@ -1,12 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
-import { useState } from "react";
 
 interface ContactFormProps {}
 
@@ -16,7 +16,7 @@ export function ContactForm(props: ContactFormProps) {
     register,
     trigger,
     formState: { errors },
-    reset
+    reset,
   } = useForm();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,14 +38,17 @@ export function ContactForm(props: ContactFormProps) {
     const formData = new FormData(formElement);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/luizrenangomes77@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(Object.fromEntries(formData))
-      });
+      const response = await fetch(
+        "https://formsubmit.co/ajax/luizrenangomes77@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(Object.fromEntries(formData)),
+        }
+      );
 
       if (response.ok) {
         toast.success("Form submitted successfully!");
@@ -77,10 +80,7 @@ export function ContactForm(props: ContactFormProps) {
         </p>
 
         <div className="space-y-4 max-w-[692px]">
-          <form
-            onSubmit={onSubmit}
-            method="POST"
-          >
+          <form onSubmit={onSubmit} method="POST">
             <input type="hidden" name="_subject" value="Novo contato do site" />
             <input type="hidden" name="_captcha" value="false" />
 
@@ -99,7 +99,10 @@ export function ContactForm(props: ContactFormProps) {
                   })}
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm opacity-0 transition-opacity duration-200" style={{ opacity: isLoading ? '0' : '1' }}>
+                  <p
+                    className="text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                    style={{ opacity: isLoading ? "0" : "1" }}
+                  >
                     {errors.name.type === "required" &&
                       "This field is required."}
                     {errors.name.type === "maxLength" &&
@@ -121,7 +124,10 @@ export function ContactForm(props: ContactFormProps) {
                   })}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm opacity-0 transition-opacity duration-200" style={{ opacity: isLoading ? '0' : '1' }}>
+                  <p
+                    className="text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                    style={{ opacity: isLoading ? "0" : "1" }}
+                  >
                     {errors.email.type === "required" &&
                       "This field is required."}
                     {errors.email.type === "pattern" &&
@@ -144,7 +150,10 @@ export function ContactForm(props: ContactFormProps) {
                 })}
               />
               {errors.message && (
-                <p className="text-red-500 text-sm opacity-0 transition-opacity duration-200" style={{ opacity: isLoading ? '0' : '1' }}>
+                <p
+                  className="text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                  style={{ opacity: isLoading ? "0" : "1" }}
+                >
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
