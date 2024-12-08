@@ -12,12 +12,12 @@
   }
 
   ::selection {
-    background-color: #eeee74;
+    background-color: #2abe32;
     color: #000000;
   }
 
   .dark ::selection {
-    background-color: #eeee74;
+    background-color: #2abe32;
     color: #000000;
   }
 }
