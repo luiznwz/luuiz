@@ -51,7 +51,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
       <div className="flex">
         <Link href="/projects">
           <Button variant="outline">
-            <span className="text-secondary-foreground">View All Projects</span>
+            <span className="text-secondary-foreground">All</span>
           </Button>
         </Link>
       </div>
