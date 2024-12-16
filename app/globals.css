@@ -11,7 +11,7 @@
     box-shadow: 0 4px 6px var(--shadow);
   }
 
-  ::selection {
+  /* ::selection {
     background-color: #2abe32;
     color: #000000;
   }
@@ -19,7 +19,7 @@
   .dark ::selection {
     background-color: #2abe32;
     color: #000000;
-  }
+  } */
 }
 
 @layer base {
