@@ -11,15 +11,15 @@
     box-shadow: 0 4px 6px var(--shadow);
   }
 
-  /* ::selection {
-    background-color: #2abe32;
+  ::selection {
+    background-color: hsl(var(--accent));
     color: #000000;
   }
 
   .dark ::selection {
-    background-color: #2abe32;
+    background-color:  hsl(var(--accent));
     color: #000000;
-  } */
+  }
 }
 
 @layer base {
