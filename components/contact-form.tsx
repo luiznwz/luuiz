@@ -81,7 +81,7 @@ export function ContactForm(props: ContactFormProps) {
 
         <div className="space-y-4 max-w-[692px]">
           <form onSubmit={onSubmit} method="POST">
-            <input type="hidden" name="_subject" value="Novo contato do site" />
+            <input type="hidden" name="_subject" value="New contact on site" />
             <input type="hidden" name="_captcha" value="false" />
 
             <div className="grid grid-cols-2 gap-4">
