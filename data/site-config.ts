@@ -75,7 +75,7 @@ const siteConfig: SiteConfig = {
   ],
   projectsSchema: [
     {
-      title: "ChatCollect",
+      title: "Empty",
       period: "Jan 2024 - Feb 2024",
       description:
         "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
@@ -90,23 +90,7 @@ const siteConfig: SiteConfig = {
         "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
       imageUrl: "/image-s3-image1.jpg",
       projectUrl: "http://localhost:3000/",
-    },
-    {
-      title: "ChatCollect",
-      period: "Jan 2024 - Feb 2024",
-      description:
-        "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
-      imageUrl: "/image-s3-image1.jpg",
-      projectUrl: "http://localhost:3000/",
-    },
-    {
-      title: "ChatCollect",
-      period: "Jan 2024 - Feb 2024",
-      description:
-        "With the release of the Open GPT Store, I was able to create a chatbot that could collect data from users and store it in a database. This was a fun project to work on and I learned a lot about natural language processing and machine learning.",
-      imageUrl: "/image-s3-image1.jpg",
-      projectUrl: "http://localhost:3000/",
-    },
+    }
   ],
   footerNavLinks: [
     {
