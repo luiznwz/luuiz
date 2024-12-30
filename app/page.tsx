@@ -15,7 +15,7 @@ import { useTheme } from "next-themes";
 export default function Home() {
   const { setTheme } = useTheme();
   return (
-    <div className="relative bg-background text-[var(--foreground)]">
+    <div className="relative motion-preset-focus bg-background text-[var(--foreground)]">
       <main className="mt-20 px-5 sm:mt-24">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
