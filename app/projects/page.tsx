@@ -20,18 +20,6 @@ export default function Project() {
               <div className="opacity-100 filter blur-0 transform translate-y-0 translate-z-0">
                 <div className="flex flex-col space-y-4">
                   <div className="space-y-2">
-                    <Breadcrumb>
-                      <BreadcrumbList>
-                        <BreadcrumbItem>
-                          <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
-                        <BreadcrumbItem>
-                          <BreadcrumbPage>Projects</BreadcrumbPage>
-                        </BreadcrumbItem>
-                      </BreadcrumbList>
-                    </Breadcrumb>
-                    {/* <h2 className="font-medium">Projects</h2> */}
                     <h3 className="pt-4 text-2xl font-medium tracking-tighter sm:text-xl">
                       Check out my latest work
                     </h3>

@@ -17,21 +17,6 @@ export default function Home() {
   return (
     <div className="relative motion-preset-focus bg-background text-[var(--foreground)]">
       <main className="mt-20 px-5 sm:mt-24">
-        {/* <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme("light")}>
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("dark")}>
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu> */}
         <CommandDialog />
         <div className="max-w-[692px] mx-auto flex flex-col gap-20 sm:gap-24">
           <Header />
