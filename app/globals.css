@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .paused {
-    animation-play-state: paused;
-  }
 
   .shadow-dark {
     box-shadow: 0 4px 6px var(--shadow);
@@ -44,7 +41,7 @@
     --ring: #1c1c1c;
     --radius: 0.5rem;
     --chart-1: #f5a623;
-  
+
   }
 
   .dark {
