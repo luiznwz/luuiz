@@ -1,12 +1,4 @@
 import { FooterPages } from "@/components/footer-pages";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import siteConfig from "@/data/site-config";
 
 export default function Project() {
