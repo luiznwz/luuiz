@@ -3,37 +3,23 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
-  // All imported modules in your tests should be mocked automatically
-  // automock: false,
-
-  // Stop running tests after `n` failures
-  // bail: 0,
-
-  // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/s8/gmf0w8tx3hb7w2_50dy48vrc0000gn/T/jest_dx",
-
-  // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
-
-  // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
-
-  // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
-
-  // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
-
-  // An array of regexp pattern strings used to skip coverage collection
-  // coveragePathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
-
-  // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
+  transformIgnorePatterns: ["/node_modules/(?!next-view-transitions)/"],
+  transform: {
+    "^.+\\.(ts|tsx)$": ["ts-jest", { tsconfig: "./tsconfig.json" }],
+  },
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
