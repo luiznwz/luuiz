@@ -42,7 +42,7 @@ export const Projects: React.FC<ProjectsProps> = () => {
             <p className="">{project.description}</p>
           </div>
           <div className="hidden italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0">
-            <a href="/" className="text-sm text-secondary-foreground">
+            <a href="/projects" className="text-sm text-secondary-foreground">
               View Project
             </a>
           </div>
