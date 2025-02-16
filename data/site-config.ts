@@ -94,16 +94,16 @@ const siteConfig: SiteConfig = {
       href: "https://twitter.com/luuiz",
     },
   ],
-  hero: {
-    title: "Hi There & Welcome to My Portfolio!",
-    text: "I'm **Luiz**, a Front end developer at **Shakers Agency**, dedicated to the realms of collaboration and artificial intelligence. My approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products. I have a profound appreciation for top-notch software, visual design, and the principles of product-led growth. Feel free to explore some of my coding endeavors on <a href='https://github.com/luiznwz'>GitHub</a> or follow me on <a href='https://twitter.com/luiznwz'>Twitter/X</a>.",
-    actions: [
-      {
-        text: "Get in Touch",
-        href: "/contact",
-      },
-    ],
-  },
+  // hero: {
+  //   title: "Hi There & Welcome to My Portfolio!",
+  //   text: "I'm **Luiz**, a Front end developer at **Shakers Agency**, dedicated to the realms of collaboration and artificial intelligence. My approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products. I have a profound appreciation for top-notch software, visual design, and the principles of product-led growth. Feel free to explore some of my coding endeavors on <a href='https://github.com/luiznwz'>GitHub</a> or follow me on <a href='https://twitter.com/luiznwz'>Twitter/X</a>.",
+  //   actions: [
+  //     {
+  //       text: "Get in Touch",
+  //       href: "/contact",
+  //     },
+  //   ],
+  // },
   subscribe: {
     title: "Subscribe to Luiz Newsletter",
     text: "One update per week. All the latest posts directly in your inbox.",
