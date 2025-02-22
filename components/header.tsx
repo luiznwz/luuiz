@@ -1,22 +1,38 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { motion } from "framer-motion";
 
 export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
   return (
     <section className="flex flex-col gap-5 sm:gap-6">
-      <div className="flex items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center"
+      >
         <Avatar>
           <a href="https://github.com/luiznwz">
             <AvatarImage src="https://github.com/luiznwz.png" />
             <AvatarFallback>LR</AvatarFallback>
           </a>
         </Avatar>
-        <div className="mx-3">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mx-3"
+        >
           <h1 className="font-medium text-primary text-base">Luiz Renan</h1>
-        </div>
-      </div>
-      <div className="space-y-4">
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="space-y-4"
+      >
         <h2 className="text-secondary-foreground">About</h2>
         <p className="text-foreground font-normal text-base leading-[1.65]">
           I{"'"}m a Front-end Developer at{" "}
@@ -33,11 +49,11 @@ export const Header: React.FC<HeaderProps> = () => {
           learning.
         </p>
         <p className="text-foreground font-normal text-base leading-[1.65]">
-          I’m always exploring new design and development techniques to balance
+          I'm always exploring new design and development techniques to balance
           aesthetics, speed, and conversion, ensuring that every project
           delivers real value to users and businesses.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };

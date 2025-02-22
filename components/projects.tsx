@@ -4,6 +4,7 @@ import { Link } from "next-view-transitions";
 import React from "react";
 import { Button } from "./ui/button";
 import { LinkPreview } from "./ui/link-preview";
+import { motion } from "framer-motion";
 export interface ProjectsProps {}
 
 const projects = [
@@ -26,18 +27,31 @@ const projects = [
 
 export const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <div className="flex flex-col gap-5 sm:gap-4">
-      <h2 className="font-medium text-secondary-foreground">Projects</h2>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-5 sm:gap-4"
+    >
+      <motion.h2
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="font-medium text-secondary-foreground"
+      >
+        Projects
+      </motion.h2>
       {projects.map((project, index) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
           key={index}
           className="flex relative justify-between items-start gap-8 group mb-5 sm:mb-3"
         >
           <div className="grow">
             <h2 className="text-xl py-2 text-secondary-foreground leading-tight font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1">
-              <LinkPreview url={project.projectUrl}>
-                {project.title}
-              </LinkPreview>
+              <LinkPreview url={project.projectUrl}>{project.title}</LinkPreview>
             </h2>
             <p className="">{project.description}</p>
           </div>
@@ -46,15 +60,20 @@ export const Projects: React.FC<ProjectsProps> = () => {
               View Project
             </a>
           </div>
-        </div>
+        </motion.div>
       ))}
-      <div className="flex">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="flex"
+      >
         <Link href="/projects">
           <Button variant="outline">
             <span className="text-secondary-foreground">All</span>
           </Button>
         </Link>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

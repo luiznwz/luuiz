@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -65,9 +66,26 @@ export function ContactForm(props: ContactFormProps) {
 
   return (
     <>
-      <section className="flex flex-col gap-5 md:gap-6">
-        <h2 className="font-medium text-secondary-foreground">Connect</h2>
-        <p className="text-foreground font-normal text-base leading-[1.65]">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col gap-5 md:gap-6"
+      >
+        <motion.h2
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="font-medium text-secondary-foreground"
+        >
+          Connect
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-foreground font-normal text-base leading-[1.65]"
+        >
           I am currently open to new opportunities. If you{"'"}d like to get in
           touch, please feel free to{" "}
           <a
@@ -77,9 +95,14 @@ export function ContactForm(props: ContactFormProps) {
             email
           </a>{" "}
           me.
-        </p>
+        </motion.p>
 
-        <div className="space-y-4 max-w-[692px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="space-y-4 max-w-[692px]"
+        >
           <form onSubmit={onSubmit} method="POST">
             <input type="hidden" name="_subject" value="New contact on site" />
             <input type="hidden" name="_captcha" value="false" />
@@ -98,119 +121,47 @@ export function ContactForm(props: ContactFormProps) {
                     maxLength: 100,
                   })}
                 />
-                {errors.name && (
-                  <p
-                    className="text-red-500 text-sm opacity-0 transition-opacity duration-200"
-                    style={{ opacity: isLoading ? "0" : "1" }}
-                  >
-                    {errors.name.type === "required" &&
-                      "This field is required."}
-                    {errors.name.type === "maxLength" &&
-                      "Max length is 100 characters."}
-                  </p>
-                )}
               </div>
               <div className="space-y-2">
                 <Label className="text-secondary-foreground" htmlFor="email">
                   Email
                 </Label>
                 <Input
-                  id="email"
                   type="email"
+                  id="email"
                   placeholder="Enter your email"
                   {...register("email", {
                     required: true,
-                    pattern: /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                   })}
                 />
-                {errors.email && (
-                  <p
-                    className="text-red-500 text-sm opacity-0 transition-opacity duration-200"
-                    style={{ opacity: isLoading ? "0" : "1" }}
-                  >
-                    {errors.email.type === "required" &&
-                      "This field is required."}
-                    {errors.email.type === "pattern" &&
-                      "Invalid email address."}
-                  </p>
-                )}
               </div>
             </div>
-            <div className="mt-2 space-y-2">
+
+            <div className="mt-4 space-y-2">
               <Label className="text-secondary-foreground" htmlFor="message">
                 Message
               </Label>
               <Textarea
                 id="message"
-                placeholder="Type your message here."
-                className="min-h-[120px]"
+                placeholder="Enter your message"
                 {...register("message", {
                   required: true,
-                  maxLength: 2000,
                 })}
               />
-              {errors.message && (
-                <p
-                  className="text-red-500 text-sm opacity-0 transition-opacity duration-200"
-                  style={{ opacity: isLoading ? "0" : "1" }}
-                >
-                  {errors.message.type === "required" &&
-                    "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 characters."}
-                </p>
-              )}
             </div>
-            <div className="flex mt-4">
-              <Button
-                type="submit"
-                variant="outline"
-                className="btn text-secondary-foreground relative"
-                disabled={isLoading}
-              >
-                {isLoading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-t-transparent border-secondary-foreground rounded-full animate-spin"></div>
-                    <span>Sending...</span>
-                  </div>
-                ) : (
-                  "Submit"
-                )}
-              </Button>
-            </div>
+
+            <Button
+              className="mt-4"
+              type="submit"
+              disabled={isLoading}
+              variant="outline"
+            >
+              {isLoading ? "Sending..." : "Send Message"}
+            </Button>
           </form>
-        </div>
-        <p className="mt-8 text-foreground font-normal text-base leading-[1.65]">
-          You can see more of my work on{" "}
-          <a
-            href="https://www.linkedin.com/in/luizrenan"
-            className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400 duration-400 transition"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Linkedin
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://twitter.com"
-            className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400 duration-400 transition"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>{" "}
-          or my code on{" "}
-          <a
-            href="https://github.com/luiznwz"
-            className="underline decoration-neutral-500 underline-offset-2 hover:decoration-neutral-400 duration-400 transition"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          .
-        </p>
-      </section>
+        </motion.div>
+      </motion.section>
     </>
   );
 }
