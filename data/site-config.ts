@@ -87,11 +87,11 @@ const siteConfig: SiteConfig = {
     },
     {
       text: "Instagram",
-      href: "https://instagram.com/luuiz",
+      href: "https://instagram.com/luuizgm_",
     },
     {
       text: "Twitter/X",
-      href: "https://twitter.com/luuiz",
+      href: "https://twitter.com/",
     },
   ],
   // hero: {

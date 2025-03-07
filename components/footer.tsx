@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = () => {
           )}
           <p className="text-sm">
             &copy; {new Date().getFullYear()}&nbsp;
-            <a className="hover:underline hover:underline-offset-2" href="/">
+          <a className="hover:underline hover:underline-offset-2" href="/">
               {siteConfig.title}
             </a>
             . All rights reserved.
