@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    remotePatterns: ["api.microlink.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.microlink.io",
+      },
+    ],
   },
 };
 
-
-export default config;
+export default nextConfig;
