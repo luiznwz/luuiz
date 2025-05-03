@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-
   .shadow-dark {
     box-shadow: 0 4px 6px var(--shadow);
   }
@@ -14,7 +13,7 @@
   }
 
   .dark ::selection {
-    background-color:  hsl(var(--accent));
+    background-color: hsl(var(--accent));
     color: #000000;
   }
 }
@@ -41,7 +40,6 @@
     --ring: #1c1c1c;
     --radius: 0.5rem;
     --chart-1: #f5a623;
-
   }
 
   .dark {
